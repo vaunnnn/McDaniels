@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Mc;Employee Database</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+
+        <div class="header">
+            <div class="left-hand">
+                <img id="logo" src="logo.jpg" alt="Mc'Daniels Logo">
+                <h1>Mc'Daniels Employee Database</h1>
+            </div>
+
+        <div>
+
+        <div class="right-hand">
+            <button class="button" type="submit" target="_blank">+</button>
+            <input class="search" type="text" id="search" onkeyup="search()" placeholder="Search Employee">
+        </div>
+
+    </div>
+
+    </div>
+        <table class="table" id="table">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Name</th>
+                    <th>ID</th>
+                    <th>Role</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+    
+            <tbody id="tbody">
+            </tbody>
+        </table>
+    </div>
+
+    <div id="employeeModal" class="modal">
+        <h2>Add Employee</h2>
+        <form class="employeeForm">
+            <input type="text" id="firstName" placeholder="First Name" required>
+            <input type="text" id="lastName" placeholder="Last Name" required>
+            <input type="text" id="employeeId" placeholder="Employee ID" required>
+                <select id="role" required>
+                    <option value="">Select Role</option>
+                    <option value="Manager">Manager</option>
+                    <option value="Assistant Manager">Assistant Manager</option>
+                    <option value="Shift Supervisor">Shift Supervisor</option>
+                    <option value="Kitchen Crew">Kitchen Crew</option>
+                    <option value="Cashier">Cashier</option>
+                    <option value="Drive Thru Attendant">Drive Thru Attendant</option>
+                </select>
+                <select id="status" required>
+                    <option value="">Select Status</option>
+                    <option value="Intern">Intern</option>
+                    <option value="Part - Time">Part - Time</option>
+                    <option value="Full - Time">Full - Time</option>
+                </select>
+                <button class="button" type="submit" id="submit" onclick="addEmployee()">+</button>
+                <button class="button" type="submit" id="remove" onclick="removeEmployee()">-</button>
+        </form>
+    </div>
+
+    <script src="script.js" defer></script>
+</body>
+</html>
